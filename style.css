@@ -9,7 +9,16 @@
 }
 html,
 body {
-  height: 100%;
+  /*
+   * The html and body elements previously had a fixed height of 100%,
+   * which prevented the page from scrolling on the redesigned home page.
+   * Using min-height instead allows the document to grow vertically to
+   * accommodate additional sections, while still ensuring it occupies at
+   * least the full viewport height.  We also unset the explicit height
+   * so that the body can expand beyond 100% if needed.
+   */
+  min-height: 100%;
+  height: auto;
 }
 body {
   margin: 0;
@@ -496,8 +505,9 @@ menu {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: center;
-  text-align: center;
+  justify-content: flex-start;
+  text-align: left;
+  padding-left: 8%;
   color: #fff;
 }
 
@@ -513,10 +523,12 @@ menu {
   position: relative;
   z-index: 2;
   padding: 0 20px;
+  text-align: left;
+  max-width: 600px;
 }
 
 .home-hero h1 {
-  font-size: clamp(36px, 7vw, 72px);
+  font-size: clamp(36px, 7vw, 40px);
   margin: 0;
 }
 
@@ -556,6 +568,257 @@ menu {
    changes. */
 body {
   padding-top: 72px;
+}
+
+/* ---------------------------------------------------------------------- */
+/* Custom styles for the redesigned home page                             */
+/* These classes define the look and feel of the new sections on the      */
+/* index.html page. Each section makes use of subtle waves and color      */
+/* transitions to create a cohesive scrolling experience.                 */
+
+/* Wave wrapper ensures SVG spans the full width and doesn't create    */
+/* unwanted margins */
+.wave-wrapper {
+  line-height: 0;
+}
+.wave-wrapper .wave {
+  display: block;
+  width: 100%;
+  height: 60px;
+}
+
+/* What we do section */
+.what-we-do {
+  background-color: #ffffff;
+  color: #333;
+  text-align: center;
+  padding: 80px 20px;
+  position: relative;
+}
+.what-we-do .content {
+  max-width: 900px;
+  margin: 0 auto;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.what-we-do .content.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+.what-we-do h2 {
+  font-size: clamp(32px, 6vw, 56px);
+  margin-bottom: 20px;
+  color: #222;
+}
+.what-we-do p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* What we offer section */
+.what-we-offer {
+  background: linear-gradient(180deg, #4c5aaf, #c3944a);
+  color: #fff;
+  text-align: center;
+  padding: 80px 20px;
+  position: relative;
+}
+.what-we-offer h2 {
+  font-size: clamp(32px, 6vw, 56px);
+  margin-bottom: 40px;
+  color: #fff;
+}
+.offer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.offer-card {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, background 0.3s ease;
+  color: inherit;
+  text-decoration: none;
+}
+.offer-card:hover {
+  transform: translateY(-8px);
+  background: rgba(255, 255, 255, 0.2);
+}
+.offer-card img {
+  max-width: 100%;
+  height: 140px;
+  object-fit: contain;
+  margin-bottom: 12px;
+}
+.offer-card h3 {
+  margin: 0 0 8px;
+  font-size: 20px;
+}
+.offer-card p {
+  margin: 0;
+  font-size: 14px;
+  color: #f5f5f5;
+}
+
+/* About home section */
+.about-home {
+  position: relative;
+  background-image: url('assets/boat.jpeg');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  padding: 100px 20px;
+  text-align: center;
+}
+.about-home::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+.about-home .content {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.about-home h2 {
+  font-size: clamp(32px, 6vw, 56px);
+  margin-bottom: 20px;
+  color: #fff;
+}
+.about-home p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 16px;
+  color: #e8e8e8;
+}
+
+/* Did you know section */
+.did-you-know {
+  background-color: #f7f7f7;
+  color: #333;
+  padding: 80px 20px;
+  text-align: center;
+  position: relative;
+}
+.did-you-know h2 {
+  font-size: clamp(32px, 6vw, 56px);
+  margin-bottom: 40px;
+  color: #333;
+}
+.did-you-know .fact-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.did-you-know .fact-text {
+  flex: 1;
+  max-width: 600px;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #555;
+}
+.did-you-know img {
+  max-width: 180px;
+  width: 28%;
+  height: auto;
+  flex-shrink: 0;
+}
+@media (max-width: 768px) {
+  .did-you-know img {
+    width: 40%;
+    max-width: 140px;
+  }
+}
+
+/* Contact top section */
+.contact-top {
+  background-color: #888888;
+  color: #fff;
+  text-align: center;
+  padding: 60px 20px;
+}
+.contact-top h2 {
+  font-size: clamp(32px, 6vw, 56px);
+  margin-bottom: 20px;
+}
+.contact-top p {
+  font-size: 16px;
+  max-width: 700px;
+  margin: 0 auto 24px;
+  line-height: 1.5;
+  color: #f2f2f2;
+}
+.contact-top .contact-btn {
+  display: inline-block;
+  padding: 14px 30px;
+  background-color: var(--accent, #ff3b3b);
+  color: #fff;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+.contact-top .contact-btn:hover {
+  background-color: color-mix(in srgb, var(--accent, #ff3b3b) 80%, #ffffff 20%);
+  box-shadow: 0 0 20px color-mix(in srgb, var(--accent, #ff3b3b) 60%, transparent);
+}
+
+/* Contact bottom section */
+.contact-bottom {
+  background-color: #141414;
+  color: #fff;
+  padding: 60px 20px;
+}
+.contact-bottom .contact-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.contact-column {
+  flex: 1 1 250px;
+  margin: 20px;
+}
+.contact-column h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+  color: #fff;
+}
+.contact-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.contact-column ul li {
+  margin-bottom: 8px;
+}
+.contact-column ul li a {
+  color: #ddd;
+  text-decoration: none;
+  font-size: 14px;
+}
+.contact-column ul li a:hover {
+  text-decoration: underline;
+}
+.contact-logo img {
+  width: 100px;
+  margin-bottom: 12px;
+}
+.contact-details p {
+  font-size: 14px;
+  color: #bbb;
+  line-height: 1.5;
+  margin: 4px 0;
 }
 
 /*
