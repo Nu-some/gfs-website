@@ -1,0 +1,74 @@
+{
+  "abate": {
+    "name": "Abate Fetel",
+    "desc": "Elegant long-necked pear with honey-sweet, buttery bite.",
+    "full": "Abate Fetel pears have an elongated, elegant neck and yellow-green skin, often brushed with light pink and fine russet freckles. The creamy white flesh stays semi-crisp yet velvety and buttery, delivering a sweet, aromatic flavour with gentle honey notes.",
+    "img": "assets/pear-abate.png",
+    "glow": "#d3a84f",
+    "specs": [
+      ["Late Jan", "Harvest"],
+      ["Honey-sweet/Aromatic", "Taste"],
+      ["Semi-crisp/Buttery", "Texture"]
+    ]
+  },
+  "boncretien": {
+    "name": "Bon Chrétien",
+    "desc": "Classic, widely grown pear with sweet, creamy flesh.",
+    "full": "Bon Chrétien is a medium to large, slightly irregular pear with a rounded base and small neck. Its skin turns from green to pale yellow as it ripens, marked by russet patches and visible lenticels. The white to ivory flesh is juicy, fine-grained and creamy, ideal for fresh eating as well as baking, drying and preserving.",
+    "img": "assets/pear-boncretien.png",
+    "glow": "#bcd85a",
+    "specs": [
+      ["Jan–Feb", "Harvest"],
+      ["Sweet/Aromatic", "Taste"],
+      ["Juicy/Creamy", "Texture"]
+    ]
+  },
+  "forelle": {
+    "name": "Forelle",
+    "desc": "Small, speckled pear with crisp, sweet flesh.",
+    "full": "Forelle pears are small, symmetrical and bell-shaped, with smooth thin skin that shifts from green to yellow as it ripens. A red blush and bright crimson speckles give it a distinctive look. The creamy white flesh is dense, slightly coarse and crisp, with a sweet flavour and a gentle hint of cinnamon.",
+    "img": "assets/pear-forelle.png",
+    "glow": "#f1c85a",
+    "specs": [
+      ["Mar–May", "Harvest"],
+      ["Sweet w/ spice hint", "Taste"],
+      ["Crisp/Dense", "Texture"]
+    ]
+  },
+  "packham": {
+    "name": "Packham's Triumph",
+    "desc": "Large, knobbly pear with very sweet fine-textured flesh.",
+    "full": "Packham’s Triumph pears are large and often irregular in shape, with a bumpy, characterful surface. Even when ripe, the skin stays green-yellow. The creamy white flesh is finely textured and very sweet, making it one of the most popular pears for fresh eating, salads and baking.",
+    "img": "assets/pear-packham.png",
+    "glow": "#a5d84f",
+    "specs": [
+      ["Late Jan–Late Jul", "Harvest"],
+      ["Sweet", "Taste"],
+      ["Fine/Creamy", "Texture"]
+    ]
+  },
+  "rosemarie": {
+    "name": "Rosemarie",
+    "desc": "Handsome blushed pear, sweet and very juicy.",
+    "full": "Rosemarie is a slightly stocky pear with smooth skin and an attractive orange-red to pink blush over a yellow background. The flesh is pale, smooth and very juicy, giving a soft, sweet eating experience. It is excellent as a dessert pear and also suitable for baking.",
+    "img": "assets/pear-rosemarie.png",
+    "glow": "#f29b4b",
+    "specs": [
+      ["Late Dec–Feb", "Harvest"],
+      ["Sweet", "Taste"],
+      ["Juicy/Smooth", "Texture"]
+    ]
+  },
+  "vermont": {
+    "name": "Vermont Beauty",
+    "desc": "Green pear with pink-red speckles, refreshing crisp or soft.",
+    "full": "Vermont Beauty is a bell-shaped green pear, easily recognised by its pink-red dots scattered across the skin. It can be enjoyed while still crisp and slightly coarse in texture or left to ripen until the flesh becomes fine, soft and melting. Flavour stays sweet and refreshing at both stages.",
+    "img": "assets/pear-vermont.png",
+    "glow": "#b8dd52",
+    "specs": [
+      ["Mar–May", "Harvest"],
+      ["Sweet/Refreshing", "Taste"],
+      ["Crisp → Soft", "Texture"]
+    ]
+  }
+}

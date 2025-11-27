@@ -1,0 +1,212 @@
+{
+  "granny": {
+    "name": "Granny Smith",
+    "desc": "Tangy green, crisp and juicy — perfect for a zesty umbrella.",
+    "full": "First discovered in Australia in the 1860s, are famous for their bright green skin and tangy flavor. Their firm, juicy texture makes them ideal for both fresh eating and baking. Loved worldwide, they remain a cornerstone of South Africa’s export apple varieties.",
+    "img": "assets/granny.png",
+    "glow": "limegreen",
+    "specs": [
+      [
+        "Mar–Jan",
+        "Harvest"
+      ],
+      [
+        "Tangy",
+        "Taste"
+      ],
+      [
+        "Juicy/Firm",
+        "Crunch"
+      ]
+    ]
+  },
+  "braeburn": {
+    "name": "Braeburn",
+    "desc": "Red‑orange streaks, aromatic and balanced sweet‑tart flavor.",
+    "full": "Braeburn apples, first discovered in New Zealand in the 1950s, are known for their red‑orange streaks over a green‑yellow background. They deliver a crisp, juicy bite with a well‑balanced sweet‑tart flavor. Versatile and aromatic, they are excellent for eating fresh or cooking.",
+    "img": "assets/braeburn.png",
+    "glow": "orangered",
+    "specs": [
+      [
+        "Mar–Oct",
+        "Harvest"
+      ],
+      [
+        "Sweet/Tart",
+        "Taste"
+      ],
+      [
+        "High",
+        "Crunch"
+      ]
+    ]
+  },
+  "cripps": {
+    "name": "Cripps Red",
+    "desc": "Deep red, crunchy and refreshing with balanced flavor.",
+    "full": "Cripps’ Red apples, developed in Australia, are prized for their vibrant deep red color and extra crunchy texture. They have a balanced sweet‑tart flavor, making them refreshing and long‑lasting in storage. In South Africa, they are marketed as Joya® and enjoyed well into summer.",
+    "img": "assets/cripps.png",
+    "glow": "crimson",
+    "specs": [
+      [
+        "May–Jan",
+        "Harvest"
+      ],
+      [
+        "Sweet/Tart",
+        "Taste"
+      ],
+      [
+        "Extra crunchy",
+        "Crunch"
+      ]
+    ]
+  },
+  "pinklady": {
+    "name": "Pink Lady",
+    "desc": "Striking pink blush with a lively sweet‑tart bite.",
+    "full": "Pink Lady apples, developed in Australia, are renowned for their striking pink blush over a golden‑green base. They offer a crisp bite with a lively balance of sweetness and tartness. Known for excellent storage life, they are a premium choice in both local and export markets.",
+    "img": "assets/pinklady.png",
+    "glow": "pink",
+    "specs": [
+      [
+        "Apr–Dec",
+        "Harvest"
+      ],
+      [
+        "Sweet/Tart",
+        "Taste"
+      ],
+      [
+        "Crisp",
+        "Crunch"
+      ]
+    ]
+  },
+  "gala": {
+    "name": "Gala",
+    "desc": "Mildly sweet and friendly; a crowd favorite.",
+    "full": "Gala shares the naturally sweet character of the Royal Gala line and is widely favored for its pleasant flavor and crunch. It remains a staple in many markets for fresh snacking.",
+    "img": "assets/gala.png",
+    "glow": "coral",
+    "specs": [
+      [
+        "Feb–Nov",
+        "Harvest"
+      ],
+      [
+        "Sweet",
+        "Taste"
+      ],
+      [
+        "Medium",
+        "Crunch"
+      ]
+    ]
+  },
+  "royalgala": {
+    "name": "Royal Gala",
+    "desc": "Vibrant red mutation of Gala — sweet and crisp.",
+    "full": "Royal Gala apples are a vibrant red mutation of the Gala variety, first introduced to South Africa in the 1970s. Known for their crisp texture and naturally sweet flavor, they quickly won global popularity. Today, mutations like Royal Beaut and BigBucks make them one of the most widely planted and traded apples worldwide.",
+    "img": "assets/royalgala.png",
+    "glow": "red",
+    "specs": [
+      [
+        "Feb–Nov",
+        "Harvest"
+      ],
+      [
+        "Sweet",
+        "Taste"
+      ],
+      [
+        "Medium–High",
+        "Crunch"
+      ]
+    ]
+  },
+  "golden": {
+    "name": "Golden Delicious",
+    "desc": "Smooth golden skin with honey‑sweet flavor.",
+    "full": "Golden Delicious apples are easily recognized by their smooth golden‑yellow skin and honey‑sweet flavor. With a crisp yet tender bite, they are perfect for snacking, salads, and baking. They remain a popular variety globally thanks to their balanced sweetness and versatility.",
+    "img": "assets/golden.png",
+    "glow": "gold",
+    "specs": [
+      [
+        "Feb–Jan",
+        "Harvest"
+      ],
+      [
+        "Sweet",
+        "Taste"
+      ],
+      [
+        "Crisp/Tender",
+        "Crunch"
+      ]
+    ]
+  },
+  "fuji": {
+    "name": "Fuji",
+    "desc": "Dense, crisp and richly sweet with honey notes.",
+    "full": "Fuji apples, originally bred in Japan, are celebrated for their dense, crisp texture and rich sweetness with subtle honey notes. They have excellent keeping quality and broad consumer appeal.",
+    "img": "assets/redfuji.png",
+    "glow": "darkred",
+    "specs": [
+      [
+        "Mar–Dec",
+        "Harvest"
+      ],
+      [
+        "Sweet",
+        "Taste"
+      ],
+      [
+        "Dense/Crisp",
+        "Crunch"
+      ]
+    ]
+  },
+  "redfuji": {
+    "name": "Red Fuji",
+    "desc": "Rosy‑red blush; long shelf life and rich sweetness.",
+    "full": "Red Fuji apples, originally bred in Japan, are famous for their large size, rosy‑red blush, and long shelf life. They have a dense, crisp texture with a rich sweetness and subtle honey notes. A favorite worldwide, they are especially valued for export due to their durability and flavor.",
+    "img": "assets/redfuji.png",
+    "glow": "firebrick",
+    "specs": [
+      [
+        "Mar–Dec",
+        "Harvest"
+      ],
+      [
+        "Sweet/Honey",
+        "Taste"
+      ],
+      [
+        "Crisp",
+        "Crunch"
+      ]
+    ]
+  },
+  "topred": {
+    "name": "Top Red",
+    "desc": "Elongated, firm apples with mild sweetness.",
+    "full": "Top Red apples are a richly colored red strain, developed as a mutation of Red Delicious. They are known for their elongated shape, firm texture, and mild sweetness. Popular in both local and export markets, they add variety and visual appeal to the apple mix.",
+    "img": "assets/topred.png",
+    "glow": "darkred",
+    "specs": [
+      [
+        "Mar–Dec",
+        "Harvest"
+      ],
+      [
+        "Mildly Sweet",
+        "Taste"
+      ],
+      [
+        "Firm",
+        "Crunch"
+      ]
+    ]
+  }
+}

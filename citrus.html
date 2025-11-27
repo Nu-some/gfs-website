@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Citrus Umbrellas</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-fruit="citrus">
+  <!-- Site-wide header with logo, navigation and a hamburger menu -->
+  <header class="site-header">
+    <div class="logo">
+      <a href="home.html"><img src="assets/logo.png" alt="Logo" /></a>
+    </div>
+    <nav class="main-nav">
+      <a href="home.html">Home</a>
+      <div class="dropdown">
+        <a href="#">Fruits</a>
+        <div class="dropdown-content">
+          <a href="index.html">Apples</a>
+          <a href="pears.html">Pears</a>
+          <a href="citrus.html">Citrus</a>
+          <a href="stonefruits.html">Stone Fruits</a>
+        </div>
+      </div>
+      <a href="about.html">About</a>
+      <a href="https://www.gfs.marketing" target="_blank">Login</a>
+    </nav>
+    <button class="menu-toggle" aria-label="Menu">&#9776;</button>
+    <div class="hamburger-menu" id="hamburgerMenu">
+      <ul>
+        <li>Languages
+          <ul>
+            <li><a href="#">English</a></li>
+            <li><a href="#">Français</a></li>
+          </ul>
+        </li>
+        <li>Chat to us
+          <ul>
+            <li><a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=info@gfs.marketing&amp;su=Project%20Update&amp;body=Hello%20GFS" target="_blank">Email GFS via Gmail</a></li>
+            <li><a href="tel:+27 21 1408085">Call us <img src="assets/call-us.gif" alt="Call Us" width="200" height="auto"></a></li>
+          </ul>
+        </li>
+        <li class="social-links">Social
+          <ul>
+            <li><a href="https://twitter.com" target="_blank">Twitter</a></li>
+            <li><a href="https://www.linkedin.com/company/gfs-marketing-pty-ltd/?originalSubdomain=za" target="_blank">LinkedIn</a></li>
+            <li><a href="https://www.facebook.com" target="_blank">Facebook</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </header>
+  <main class="hero">
+    <div class="wrap">
+      <section class="hero-copy">
+        <!-- Initial name and description pulled from the first entry in citrus.json -->
+        <h1 id="fruitName">Navel Orange</h1>
+        <p id="fruitDesc">
+          Sweet, seedless and easy-to-peel — famous for its signature belly-button.
+        </p>
+        <button class="cta" id="learnMoreBtn">Learn more</button>
+      </section>
+
+      <section class="hero-art">
+        <div class="glow" id="bgGlow"></div>
+        <!-- Initial image will be overwritten by script.js once data loads -->
+        <img
+          id="fruitImg"
+          src="assets/orange-navel.png"
+          alt="Navel Orange Umbrella"
+        />
+      </section>
+
+      <nav class="right-nav" id="menu">
+        <!-- Right-hand variety list; IDs match keys in citrus.json -->
+        <a href="#" data-id="navel" class="active">Navel Orange</a>
+        <a href="#" data-id="valencia">Valencia Orange</a>
+        <a href="#" data-id="midknight">Midknight Valencia</a>
+        <a href="#" data-id="caracara">Cara Cara</a>
+        <a href="#" data-id="bloodorange">Blood Orange</a>
+        <a href="#" data-id="clementine">Clementine</a>
+        <a href="#" data-id="tangerine">Tangerine</a>
+      </nav>
+
+      <section class="specs" id="specs">
+        <!-- Placeholder specs; these will be replaced by script.js when the data loads -->
+        <div class="spec">
+          <div class="big">Nov–May</div>
+          <div class="label">Harvest</div>
+        </div>
+        <div class="spec">
+          <div class="big">Sweet/Tangy</div>
+          <div class="label">Taste</div>
+        </div>
+        <div class="spec">
+          <div class="big">Seedless/Easy Peel</div>
+          <div class="label">Traits</div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <dialog id="infoDialog">
+    <form method="dialog" class="dialog-card">
+      <h2 id="dlgTitle">Citrus Name</h2>
+      <p class="dlg-sub" id="dlgSub">Harvest: —</p>
+      <div id="dlgBody" class="dlg-body"></div>
+      <menu>
+        <button class="btn" value="ok">Close</button>
+      </menu>
+    </form>
+  </dialog>
+
+  <!-- Use the shared script.js to load data and handle interactivity -->
+  <script src="script.js"></script>
+
+  <!-- Page switch arrows: navigate between citrus, stone fruit, apple and pear pages -->
+  <div class="page-switch">
+    <!-- Left arrow goes to Pears; right arrow goes to Stone Fruits -->
+    <a href="pears.html" aria-label="Previous fruit">←</a>
+    <a href="stonefruits.html" aria-label="Next fruit">→</a>
+  </div>
+
+  <!-- Toggle script for the hamburger menu -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const toggle = document.querySelector('.menu-toggle');
+      const menu = document.getElementById('hamburgerMenu');
+      if (toggle && menu) {
+        toggle.addEventListener('click', function () {
+          menu.classList.toggle('open');
+        });
+      }
+    });
+  </script>
+  <!-- Chat button and widget -->
+  <div id="chatButton" class="live-chat-button">Chat</div>
+  <div id="chatWidget" class="chat-widget">
+    <div class="chat-header">
+      Chat with us
+      <button class="close-chat">&times;</button>
+    </div>
+    <div class="chat-body">Hi! An AI assistant will be available here soon.</div>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var chatBtn = document.getElementById('chatButton');
+      var chatWidget = document.getElementById('chatWidget');
+      var closeChat = chatWidget ? chatWidget.querySelector('.close-chat') : null;
+      if (chatBtn && chatWidget) {
+        chatBtn.addEventListener('click', function () {
+          chatWidget.style.display = 'flex';
+          chatBtn.style.display = 'none';
+        });
+        if (closeChat) {
+          closeChat.addEventListener('click', function () {
+            chatWidget.style.display = 'none';
+            chatBtn.style.display = 'block';
+          });
+        }
+      }
+    });
+  </script>
+</body>
+</html>

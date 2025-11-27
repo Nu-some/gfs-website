@@ -1,0 +1,92 @@
+{
+  "kakamas": {
+    "name": "Kakamas Peach",
+    "desc": "Firm yellow skin, classic canning variety.",
+    "full": "Kakamas is a popular South African canning peach. It has a yellow skin and very firm yellow flesh, making it ideal for processing and long storage. Known for reliability and consistency.",
+    "img": "assets/peach-kakamas.png",
+    "glow": "#f2b705",
+    "specs": [
+      ["Dec–Jan", "Harvest"],
+      ["Mild/Sweet", "Taste"],
+      ["Very Firm", "Texture"]
+    ]
+  },
+
+  "earligrande": {
+    "name": "Earligrande",
+    "desc": "Early oval peach with bright red blush.",
+    "full": "Earligrande is an early-season peach with an oval shape and pointed end. It features yellow skin with up to 75% red coverage and a pleasant flavour with a coarse texture.",
+    "img": "assets/peach-earligrande.png",
+    "glow": "#ff6b3d",
+    "specs": [
+      ["Nov", "Harvest"],
+      ["Sweet", "Taste"],
+      ["Coarse", "Texture"]
+    ]
+  },
+
+  "transvalia": {
+    "name": "Transvalia",
+    "desc": "Red blush on golden-yellow skin.",
+    "full": "Transvalia peaches have a bold red blush over a yellow background. The flesh ranges from yellow to orange and offers a good taste with a fine texture.",
+    "img": "assets/peach-transvalia.png",
+    "glow": "#ff3b2f",
+    "specs": [
+      ["Dec", "Harvest"],
+      ["Sweet", "Taste"],
+      ["Fine", "Texture"]
+    ]
+  },
+
+  "bonnigold": {
+    "name": "Bonnigold",
+    "desc": "Round yellow peach with non-melting flesh.",
+    "full": "Bonnigold peaches are round with yellow skin and flesh. They are known for their non-melting texture and fair taste, mainly used in processing and canning.",
+    "img": "assets/peach-bonnigold.png",
+    "glow": "#ffbf00",
+    "specs": [
+      ["Dec–Jan", "Harvest"],
+      ["Mild", "Taste"],
+      ["Non-melting", "Texture"]
+    ]
+  },
+
+  "summersun": {
+    "name": "Summersun",
+    "desc": "Light yellow peach with no red blush.",
+    "full": "Summersun peaches have a light yellow skin with no red colouring. The flesh is also light yellow and offers a smooth, gentle sweetness.",
+    "img": "assets/peach-summersun.png",
+    "glow": "#fff1a8",
+    "specs": [
+      ["Jan", "Harvest"],
+      ["Light Sweet", "Taste"],
+      ["Soft/Smooth", "Texture"]
+    ]
+  },
+
+  "excellence": {
+    "name": "Excellence",
+    "desc": "Yellow skin with deep red blush.",
+    "full": "Excellence peaches show a strong red blush on golden skin. The yellow flesh is sweet and juicy with good eating quality.",
+    "img": "assets/peach-excellence.png",
+    "glow": "#ff4d4d",
+    "specs": [
+      ["Jan–Feb", "Harvest"],
+      ["Sweet", "Taste"],
+      ["Juicy", "Texture"]
+    ]
+  },
+
+  "keisie": {
+    "name": "Keisie",
+    "desc": "Firm yellow peach ideal for canning.",
+    "full": "Keisie peaches have yellow skin and firm yellow flesh. They are well suited for canning operations due to their strong structure and consistent shape.",
+    "img": "assets/peach-keisie.png",
+    "glow": "#f5b041",
+    "specs": [
+      ["Jan–Feb", "Harvest"],
+      ["Mild Sweet", "Taste"],
+      ["Very Firm", "Texture"]
+    ]
+  }
+}

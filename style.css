@@ -1,0 +1,602 @@
+:root {
+  --text: #fff;
+  --muted: #c9c9c9;
+  --accent: #ff3b3b;
+  --bg: #000;
+}
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, Segoe UI, Roboto, Arial;
+}
+.hero {
+  min-height: 100vh;
+  padding: 32px 20px 64px;
+}
+.wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(320px, 0.95fr) 1.05fr;
+  gap: 32px;
+  position: relative;
+  align-items: center;
+}
+.hero-copy h1 {
+  font-size: clamp(36px, 6vw, 64px);
+  margin: 0 0 12px;
+  line-height: 1.05;
+}
+.hero-copy p {
+  max-width: 56ch;
+  color: #ddd;
+  font-size: 18px;
+  margin: 0 0 16px;
+}
+.cta {
+  position: relative;
+  display: inline-block;
+  background: transparent;
+  color: #fff;
+  /* Use the CSS custom property --accent for the outline so different
+     fruits can override it via script.js */
+  border: 2px solid var(--accent, #ff3b3b);
+  padding: 12px 28px;
+  border-radius: 6px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.cta:hover {
+  background: var(--accent, #ff3b3b);
+  /* Retain a subtle glow using the accent colour; the alpha
+     component is fixed for now */
+  box-shadow: 0 0 20px color-mix(in srgb, var(--accent, #ff3b3b) 70%, transparent);
+  border-color: var(--accent, #ff3b3b);
+}
+
+.hero-art {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 52vh;
+}
+.hero-art img {
+  max-width: min(520px, 48vw);
+  height: auto;
+  position: relative;
+  z-index: 2;
+  filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.6));
+  transition: opacity 0.45s ease, transform 0.45s ease;
+}
+.glow {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  border-radius: 10%;
+  filter: blur(80px);
+  opacity: 0.4;
+  z-index: 1;
+  transition: background 1.45s ease;
+}
+.right-nav {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  /* Ensure the menu sits above decorative glows and other artwork.  The
+     .glow inside .hero-art uses z-index: 1 and the product image uses
+     z-index: 2, so a value of 3 keeps the navigation fully
+     clickable. */
+  z-index: 3;
+}
+.right-nav a {
+  color: #bdbdbd;
+  text-decoration: none;
+  font-size: 15px;
+}
+.right-nav a.active {
+  /* Active item colour follows the accent variable */
+  color: var(--accent, #ff4444);
+}
+.specs {
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  display: flex;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+.spec .big {
+  font-size: 22px;
+  font-weight: 700;
+}
+.spec .label {
+  font-size: 13px;
+  color: #a7a7a7;
+}
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.6);
+}
+dialog {
+  border: 0;
+  border-radius: 14px;
+  padding: 0;
+  background: #141414;
+  color: #fff;
+  max-width: min(720px, 92vw);
+}
+.dialog-card {
+  padding: 18px 18px 14px;
+}
+.dialog-card h2 {
+  margin: 0 0 2px;
+}
+.dlg-sub {
+  color: #bdbdbd;
+  margin: 0 0 10px;
+  font-size: 14px;
+}
+.dlg-body {
+  max-height: min(60vh, 520px);
+  overflow: auto;
+  color: #e8e8e8;
+  line-height: 1.5;
+  white-space: pre-wrap;
+}
+menu {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin: 14px 0 0;
+  padding: 0;
+}
+.btn {
+  background: #ff3b3b;
+  border: 0;
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.slide-in {
+  animation: slideIn 0.45s ease both;
+}
+@keyframes slideIn {
+  from {
+    transform: translateX(28px);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+@media (max-width: 1024px) {
+  .wrap {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .right-nav {
+    position: static;
+    transform: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 18px;
+    justify-content: flex-start;
+    margin-top: 8px;
+    /* Maintain high stacking context on smaller screens too */
+    z-index: 3;
+  }
+  .specs {
+    position: static;
+    margin-top: 12px;
+  }
+  .hero-art {
+    order: -1;
+    min-height: 40vh;
+  }
+}
+
+/* Make the right menu feel more interactive */
+.right-nav a {
+  color: #bdbdbd;
+  text-decoration: none;
+  font-size: 15px;
+  transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+.right-nav a:hover {
+  color: #fff;
+}
+.right-nav a:focus-visible {
+  outline: 2px solid var(--accent, #ff4444);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+
+/* Stronger focus for the CTA.  We define this once so the button gets
+   a subtle glow when focused using the accent colour. */
+.cta:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent, #ff5050) 35%, transparent);
+  border-color: #fff;
+}
+
+/* Keeps umbrella from growing too big on ultra-wide displays */
+.hero-art img {
+  max-width: min(520px, 46vw); /* was 48vw */
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* ------------------------------------------------------------- */
+/* Site-wide header styles                                       */
+/* The header contains a logo, navigation links and a hamburger   */
+/* menu that appears on smaller screens. It stays fixed to the    */
+/* top of the viewport and uses a semi-transparent backdrop to    */
+/* ensure underlying artwork remains visible.                     */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(8px);
+  z-index: 2000;
+}
+
+.site-header .logo img {
+  height: 40px;
+}
+
+.site-header .main-nav {
+  display: flex;
+  gap: 20px;
+}
+
+.site-header .main-nav a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  transition: color 0.2s ease;
+}
+
+.site-header .main-nav a:hover {
+  color: var(--accent);
+}
+
+/* Hamburger button styling.  By default we display the hamburger
+   toggle on all screen sizes so users can access language, chat and
+   social options even on larger displays.  The button sits next to
+   the main navigation links. */
+.menu-toggle {
+  background: none;
+  border: none;
+  color: var(--text);
+  font-size: 28px;
+  cursor: pointer;
+  display: block;
+}
+
+.hamburger-menu {
+  position: absolute;
+  top: 100%;
+  right: 20px;
+  background: #141414;
+  border-radius: 8px;
+  padding: 16px;
+  display: none;
+  z-index: 3000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+  min-width: 180px;
+}
+
+.hamburger-menu.open {
+  display: block;
+}
+
+.hamburger-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.hamburger-menu li {
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.hamburger-menu li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.hamburger-menu .social-links ul {
+  margin-top: 6px;
+  padding-left: 12px;
+}
+
+/* Generic nested list styling for hamburger menu sub-items (languages, chat options etc.) */
+.hamburger-menu li ul {
+  margin-top: 6px;
+  padding-left: 12px;
+}
+
+/* About page background */
+.about-page {
+  background-image: url('assets/boat.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #fff;
+}
+
+/* Add semi-transparent backdrop behind about text for readability */
+.about-page .about-section {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 80px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  color: #fff;
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .site-header .main-nav {
+    display: none;
+  }
+  .menu-toggle {
+    display: block;
+  }
+}
+
+/* Dropdown navigation styles */
+.site-header .dropdown {
+  position: relative;
+}
+
+.site-header .dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: rgba(20, 20, 20, 0.95);
+  min-width: 160px;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  padding: 6px 0;
+  z-index: 2500;
+}
+
+.site-header .dropdown-content a {
+  display: block;
+  padding: 8px 16px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.site-header .dropdown-content a:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.site-header .dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Live chat placeholder styling */
+.live-chat-placeholder {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: var(--accent, #ff3b3b);
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 24px;
+  font-size: 14px;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  z-index: 4000;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Chat button and widget styles */
+.live-chat-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: var(--accent, #ff3b3b);
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 24px;
+  font-size: 14px;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  z-index: 4000;
+  cursor: pointer;
+  user-select: none;
+}
+
+.chat-widget {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 300px;
+  max-height: 400px;
+  background: #141414;
+  border-radius: 10px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
+  display: none;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 4001;
+}
+
+.chat-header {
+  background: var(--accent, #ff3b3b);
+  color: #fff;
+  padding: 10px 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+}
+
+.chat-header .close-chat {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.chat-body {
+  padding: 16px;
+  color: #e8e8e8;
+  font-size: 14px;
+  line-height: 1.5;
+  flex: 1;
+}
+
+/* Home page hero section */
+.home-hero {
+  position: relative;
+  background-image: url('assets/kids.jpeg');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+
+.home-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.home-hero .home-overlay {
+  position: relative;
+  z-index: 2;
+  padding: 0 20px;
+}
+
+.home-hero h1 {
+  font-size: clamp(36px, 7vw, 72px);
+  margin: 0;
+}
+
+.home-hero .tagline {
+  font-size: clamp(20px, 4vw, 32px);
+  margin: 12px 0;
+  font-weight: 500;
+}
+
+.home-hero .subtagline {
+  font-size: clamp(16px, 3vw, 24px);
+  margin: 0;
+  color: #f5f5f5;
+}
+
+/* About section styling */
+.about-section {
+  padding: 80px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  color: #e8e8e8;
+}
+
+.about-section h1 {
+  font-size: clamp(36px, 7vw, 60px);
+  margin: 0 0 20px;
+}
+
+.about-section p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+/* Add padding to body to prevent hero content from hiding under
+   the fixed header. Adjust this value if the header height
+   changes. */
+body {
+  padding-top: 72px;
+}
+
+/*
+ * Page switch arrows (previous/next fruit)
+ * These fixed-position buttons sit vertically centered along the left
+ * and right edges of the viewport. They allow cycling between apples,
+ * pears and citrus pages without needing to use the browser back
+ * button. Pointer events are disabled on the wrapper so only the
+ * buttons respond to clicks.
+ */
+.page-switch {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  pointer-events: none;
+  z-index: 1000;
+  padding: 0 14px;
+  transform: translateY(-50%);
+}
+.page-switch a {
+  pointer-events: auto;
+  color: #fff;
+  /* Use the accent colour for the page-switch buttons.  A default
+     fallback red is provided for browsers that don't support CSS variables. */
+  background: var(--accent, rgba(255, 59, 59, 0.6));
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 24px;
+  line-height: 1;
+  font-weight: bold;
+  transition: background 0.25s ease;
+}
+.page-switch a:hover {
+  background: var(--accent, #ff3b3b);
+}

@@ -1,0 +1,92 @@
+{
+  "navel": {
+    "name": "Navel Orange",
+    "desc": "Sweet, seedless and easy-to-peel — famous for its signature belly-button.",
+    "full": "Navel oranges are one of the world’s most popular sweet oranges, easily recognised by the small belly-button-like navel at one end. Naturally seedless and very easy to peel, they offer a bright sweet flavour with a gentle tang. Ideal for snacking, salads and fresh eating, they are enjoyed globally during their winter season.",
+    "img": "assets/orange-navel.png",
+    "glow": "#ff9b31",
+    "specs": [
+      ["Nov–May", "Harvest"],
+      ["Sweet/Tangy", "Taste"],
+      ["Seedless/Easy Peel", "Traits"]
+    ]
+  },
+
+  "valencia": {
+    "name": "Valencia Orange",
+    "desc": "High-juice, bright and refreshing — the world’s favourite juicing orange.",
+    "full": "Valencia oranges are prized for their exceptional juice content and refreshing sweet-acidic balance. With thin skin and only a few seeds, they are the leading choice for juice production worldwide. Their bright flavour and versatility make them perfect for fresh juice, marmalades, cooking and eating fresh.",
+    "img": "assets/orange-valencia.png",
+    "glow": "#ffa735",
+    "specs": [
+      ["Mar–Jul", "Harvest"],
+      ["Sweet/Acidic", "Taste"],
+      ["High Juice/Thin Skin", "Traits"]
+    ]
+  },
+
+  "midknight": {
+    "name": "Midknight Valencia",
+    "desc": "Premium seedless Valencia type — extremely juicy and smooth.",
+    "full": "Midknight Valencias are a South African premium strain of Valencia oranges, known for being virtually seedless, exceptionally juicy and smoother in texture compared to standard Valencias. They have thin skin, high juice recovery and a beautifully balanced flavour — making them a top-tier export and juicing favourite.",
+    "img": "assets/orange-midknight.png",
+    "glow": "#ffb03b",
+    "specs": [
+      ["Apr–Aug", "Harvest"],
+      ["Sweet/Balanced", "Taste"],
+      ["Seedless/High Juice", "Traits"]
+    ]
+  },
+
+  "caracara": {
+    "name": "Cara Cara",
+    "desc": "Pink-fleshed, sweet and low-acid — a unique Navel mutation.",
+    "full": "Cara Cara oranges are a natural mutation of the Navel orange, recognised by their beautiful rosy-pink flesh. They are seedless, low in acid, and exceptionally sweet, offering subtle berry-like notes. Loved for their colour and flavour, they are ideal for salads, fresh eating and premium juices.",
+    "img": "assets/orange-caracara.png",
+    "glow": "#ff8863",
+    "specs": [
+      ["Jun–Aug", "Harvest"],
+      ["Sweet/Low Acid", "Taste"],
+      ["Pink Flesh/Seedless", "Traits"]
+    ]
+  },
+
+  "bloodorange": {
+    "name": "Blood Orange",
+    "desc": "Deep red flesh with raspberry-like notes — bold and dramatic.",
+    "full": "Blood oranges are known for their striking red flesh, caused by natural anthocyanins. Their flavour is uniquely complex — sweet citrus with raspberry-like tones. They vary from lightly blushed to fully crimson inside. Perfect for juices, cocktails, pastries and fresh eating where visual impact is desired.",
+    "img": "assets/orange-blood.png",
+    "glow": "#c8393d",
+    "specs": [
+      ["Jun–Sep", "Harvest"],
+      ["Sweet/Berry-like", "Taste"],
+      ["Red Flesh/Aromatic", "Traits"]
+    ]
+  },
+
+  "clementine": {
+    "name": "Clementine",
+    "desc": "Small, seedless, sweet mandarin — easy to peel and loved by all.",
+    "full": "Clementines are smooth-skinned, small mandarins known for their rich sweetness, ease of peeling and typically seedless nature. Their tender segments and bright aroma make them a global favourite for children and adults alike. They are perfect for snacking and fresh consumption.",
+    "img": "assets/mandarin-clementine.png",
+    "glow": "#ff8f2d",
+    "specs": [
+      ["Apr–Aug", "Harvest"],
+      ["Sweet/Aromatic", "Taste"],
+      ["Seedless/Easy Peel", "Traits"]
+    ]
+  },
+
+  "tangerine": {
+    "name": "Tangerine",
+    "desc": "Bright, tangy mandarin with bold aroma and soft peel.",
+    "full": "Tangerines are vibrant mandarins with a deep orange peel, soft texture and a bold, tangy-sweet flavour. Their segments are tender and aromatic, making them beloved for both fresh eating and juicing. Slightly more acidic than clementines, they offer a refreshing citrus bite.",
+    "img": "assets/mandarin-tangerine.png",
+    "glow": "#ff7a20",
+    "specs": [
+      ["Apr–Jul", "Harvest"],
+      ["Tangy/Sweet", "Taste"],
+      ["Soft Peel/Aromatic", "Traits"]
+    ]
+  }
+}
